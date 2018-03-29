@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="designData" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #2d2d29;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DesignDataController">
+   <children>
+      <VBox spacing="2.0">
+         <children>
+            <VBox prefWidth="100.0" spacing="2.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelDaneProjektowe" text="Dane projektowe:">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelDlugoscSłupa" prefHeight="17.0" prefWidth="120.0" text="Długość słupa [m]:" />
+                        <TextField fx:id="textFieldLength" prefHeight="25.0" prefWidth="146.0">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelSiłaPodłuzna" prefWidth="120.0" text="Siła podłużna [kN]:" />
+                        <TextField fx:id="textFieldForce" prefHeight="25.0" prefWidth="146.0">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label fx:id="labelStal" prefHeight="17.0" prefWidth="120.0" text="Stal:" />
+                        <ChoiceBox fx:id="choice" prefHeight="25.0" prefWidth="146.0">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </ChoiceBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="59.0" prefWidth="304.0" spacing="10.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelSchematStatyczny" text="Schemat statyczny:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="staticOption1" mnemonicParsing="false" prefHeight="96.0" prefWidth="77.0">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys1.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="staticGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="staticOption2" mnemonicParsing="false" toggleGroup="$staticGroup">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys2.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                        <RadioButton fx:id="staticOption3" mnemonicParsing="false" toggleGroup="$staticGroup">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys3.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                        <RadioButton fx:id="staticOption4" mnemonicParsing="false" toggleGroup="$staticGroup">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys4.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="129.0" prefWidth="306.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelWariant" text="Wariant:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="27.0" prefWidth="321.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="sectionOption1" mnemonicParsing="false" onAction="#updateSection">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys5.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="sectionGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="sectionOption2" mnemonicParsing="false" onAction="#updateSection" toggleGroup="$sectionGroup">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys6.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                        <RadioButton fx:id="sectionOption3" mnemonicParsing="false" onAction="#updateSection" toggleGroup="$sectionGroup">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/Rys7.jpg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </RadioButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="55.0" prefWidth="321.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelPrzekroj" text="Przekrój" />
+                              <ChoiceBox fx:id="choice2" prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label fx:id="labelRozstawOsiowy" prefHeight="17.0" prefWidth="118.0" text="Rozstaw osiowy [mm]:" />
+                              <TextField fx:id="textFieldSpan" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="88.0" prefWidth="306.0" spacing="2.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelPrzewiazki" text="Przewiązki:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label maxWidth="-Infinity" prefWidth="50.0" text="a [mm]:" />
+                        <TextField fx:id="textFieldPlateWidth" prefWidth="50.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label fx:id="labelGrubosc" maxWidth="-Infinity" prefWidth="100.0" text="grubosc [mm]:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="textFFieldThickness" prefWidth="50.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label maxWidth="-Infinity" prefWidth="50.0" text="b [mm]:" />
+                        <TextField fx:id="textFieldPlateHeight" prefWidth="50.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelIlosc" maxWidth="-Infinity" prefWidth="50.0" text="ilosc:" />
+                        <TextField fx:id="textFieldAmount" prefWidth="50.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <HBox.margin>
+            <Insets bottom="10.0" />
+         </HBox.margin>
+      </VBox>   
+      
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <ImageView fitHeight="288.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pictures/Przewiazki300.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="115.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pictures/dwuteowniki2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <HBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </HBox.margin>
+      </VBox>
+      
+      <VBox>
+         <children>
+            <VBox prefHeight="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelDaneDoOblczen" text="Dane do obliczeń:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="33.0" text="E =" />
+                        <TextField fx:id="textFieldYoung" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="18.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="GPa" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="35.0" text="fy =" />
+                        <TextField fx:id="textFieldFy" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="16.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="MPa" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Lcr,y =" />
+                        <TextField fx:id="textFieldDlWyb" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="15.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="m" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="h0 =" />
+                        <TextField fx:id="textFieldRozstaw" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="26.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="mm" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="L =" />
+                        <TextField fx:id="textFieldDlugosc" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="33.0" right="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="m" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="80.0" spacing="2.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelKlasaPrzekroju" text="Klasa przekroju:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="69.0" text="Epsilon" />
+                        <TextField fx:id="textFieldEpsilon" editable="false" prefHeight="25.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets left="42.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                     <children>
+                        <Label fx:id="labelKlasaSrodnika" prefHeight="17.0" prefWidth="111.0" text="Klasa środnika:" />
+                        <TextField fx:id="textFieldKlasaSrodnika" editable="false" prefHeight="25.0" prefWidth="55.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                     <children>
+                        <Label fx:id="labelKlasaStopek" prefHeight="17.0" prefWidth="100.0" text="Klasa stopek:" />
+                        <TextField fx:id="textFieldKlasaStopek" editable="false" prefHeight="25.0" prefWidth="55.0">
+                           <HBox.margin>
+                              <Insets left="11.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TextArea fx:id="textArea" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" right="10.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </opaqueInsets>
+</HBox>

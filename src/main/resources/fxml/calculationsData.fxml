@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="calculationsData" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="480.0" prefWidth="750.0" style="-fx-background-color: #444444;" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalculationsDataController">
+   <content>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="735.0" style="-fx-background-color: #2d2d29;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="450.0" spacing="5.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+                     <children>
+                        <Label fx:id="labelTitleYY" text="Nośność obliczeniowa słupa ze względu na wyboczenie wzgędem osi y-y">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelYYNosnoscKrytyczna" maxWidth="-Infinity" prefWidth="300.0" text="Nośność krytyczna:" />
+                              <TextField fx:id="textFieldNosnoscKrytyczna" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelYYSmukloscWzgledna" maxWidth="-Infinity" prefWidth="300.0" text="Smukłość względna:" />
+                              <TextField fx:id="textFieldSmukloscWzgledna" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelYYLambda" maxWidth="-Infinity" prefWidth="300.0" text="Współczynnik wyboczenia giętnego:" />
+                              <TextField fx:id="textFieldWspolczynnikWyboczenia" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelYYnosnosc" maxWidth="-Infinity" prefWidth="300.0" text="Nośność:" />
+                              <TextField fx:id="textFieldNosnoscYY" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelYYWarunek" maxWidth="-Infinity" prefWidth="300.0" text="Warunek nośności:" />
+                              <TextField fx:id="textFieldNosnoscWarunekYY" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </VBox>
+                  <Label />
+                  <ImageView fx:id="tickImage1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="25.0" top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+           
+            <VBox prefHeight="200.0" prefWidth="450.0" spacing="5.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+                  <Label fx:id="labelTitleZZ" text="Nośność obliczeniowa słupa ze względu na wyboczenie wzgędem osi z-z">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                        </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZSztywnosc" maxWidth="-Infinity" prefWidth="300.0" text="Sztywność postaciowa słupa:" />
+                        <TextField fx:id="textFieldSztywnoscPostaciowa" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZSilaKrytyczna" maxWidth="-Infinity" prefWidth="300.0" text="Siła krytyczna wyboczenia giętnego:" />
+                        <TextField fx:id="textFieldSilaKrytyczna" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZSilaPodluzna" maxWidth="-Infinity" prefWidth="300.0" text="Sila podłużna w pasie:" />
+                        <TextField fx:id="textFieldSilaPodluzna" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZSilaPoprzecznaSlup" maxWidth="-Infinity" prefWidth="300.0" text="Siła poprzeczna w słupie:" />
+                        <TextField fx:id="textFieldSilaPoprzeczna" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZSilaPoprzecznaPas" maxWidth="-Infinity" prefWidth="300.0" text="Siła poprzeczna w pasie:" />
+                        <TextField fx:id="textFieldSilaPoprzeczaWPasie" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZMomentZginajacy" maxWidth="-Infinity" prefWidth="300.0" text="Moment zginający w pasie:" />
+                        <TextField fx:id="textFieldMomentZginajacyWPasie" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kNm">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZNosnoscScinanie" maxWidth="-Infinity" prefWidth="300.0" text="Nośność przekroju przy ścinaniu:" />
+                        <TextField fx:id="textFieldNosnoscPrzekroju" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZLambda" maxWidth="-Infinity" prefWidth="300.0" text="Współczynnik wyboczenia giętnego:" />
+                        <TextField fx:id="textFieldWspolczynnikWyboczeniaZZ" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZNosnoscZginanie" maxWidth="-Infinity" prefWidth="300.0" text="Nośność przekroju przy zgianiu względem osi z-z" />
+                        <TextField fx:id="textFieldNosnoscPrzekrojuPrzyZginaniu" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label maxWidth="-Infinity" prefWidth="300.0" text="Cmz" />
+                        <TextField fx:id="textFieldCmz" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label maxWidth="-Infinity" prefWidth="300.0" text="kzz" />
+                        <TextField fx:id="textFieldKzz" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelZZWarunkiNosnosci" maxWidth="-Infinity" prefHeight="17.0" prefWidth="300.0" text="Warunek nośności przekroju zginanego i ściskanego:" />
+                        <TextField fx:id="textFieldWarunekNosnosci" editable="false" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </VBox>
+                  <Label>
+                     <graphic>
+                        <ImageView fx:id="tickImage2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="25.0" top="120.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+               <children>
+            
+            <VBox prefHeight="200.0" prefWidth="450.0" spacing="5.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5.0;">
+                     <children>
+                        <Label fx:id="labelTitlePlate" text="Nośność przewiązki">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelPlateSilaPoprzeczna" maxWidth="300.0" prefWidth="300.0" text="Sila poprzeczna:" />
+                              <TextField fx:id="textFieldSilaPoprzecznaPrzewiazka" editable="false" maxWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelPlateMoment" maxWidth="300.0" prefWidth="300.0" text="Moment zginający:" />
+                              <TextField fx:id="textFieldMomentZginajacy" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="kNm">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelPlateNosnoscScinanie" maxWidth="300.0" prefWidth="300.0" text="Nośność przy ścinaniu:" />
+                              <TextField fx:id="textFieldNosnoscPrzyScinaniu" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelPlateNosnoscZginanie" maxWidth="300.0" prefWidth="300.0" text="Nośność przy zginaniu:" />
+                              <TextField fx:id="textFieldNosnoscPrzyZginaniu" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label text="kN">
+                                 <HBox.margin>
+                                    <Insets left="3.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelPlateWarunekScinanie" maxWidth="300.0" prefWidth="300.0" text="Warunek ścinania:" />
+                              <TextField fx:id="textFieldWarunekScinania" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="labelPlateWarunekZginanie" maxWidth="300.0" prefWidth="300.0" text="Warunek zginania:" />
+                              <TextField fx:id="textFieldWarunekZginania" editable="false" prefWidth="100.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </VBox>
+                  <Label>
+                     <graphic>
+                        <ImageView fx:id="tickImage3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="25.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+      
+      
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+   </content>
+</ScrollPane>

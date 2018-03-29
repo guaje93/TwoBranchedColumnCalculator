@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="776.0" style="-fx-background-color: #2d2d29;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+	<top>
+		<VBox alignment="TOP_CENTER" prefHeight="80.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+			<MenuBar>
+				<menus>
+					<Menu fx:id="menuFile" mnemonicParsing="false" text="%menu.file">
+						<items>
+							<MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#closeApplication" text="%menu.close" />
+						</items>
+					</Menu>
+					<Menu fx:id="menuEdit" mnemonicParsing="false" text="%menu.edit">
+						<items>
+							<RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" selected="true" text="Caspian">
+								<toggleGroup>
+									<ToggleGroup fx:id="styleGroup" />
+								</toggleGroup>
+							</RadioMenuItem>
+							<RadioMenuItem mnemonicParsing="false" onAction="#setModena" text="Modena" toggleGroup="$styleGroup" />
+							<SeparatorMenuItem mnemonicParsing="false" />
+							<CheckMenuItem fx:id="menuAlwaysOnTop" mnemonicParsing="false" onAction="#setAlwaysOnTop" text="%menu.alwaysOnTop" />
+						</items>
+					</Menu>
+					<Menu fx:id="menuHelp" mnemonicParsing="false" text="%menu.help">
+						<items>
+							<MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#about" text="%menu.about" />
+						</items>
+					</Menu>
+				</menus>
+			</MenuBar>
+			<fx:include fx:id="topMenuButtons" source="topMenuButtons.fxml" />
+			
+			
+				
+			
+
+		</VBox>
+ </top>
+   <center>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="580.0" prefWidth="776.0" BorderPane.alignment="CENTER">
+         
+         <children>
+         
+          <fx:include fx:id="calculationsData" source="calculationsData.fxml" /> 
+		  <fx:include fx:id="designData" source="designData.fxml" />		
+         
+         </children>
+         
+      </Pane>
+   </center>
+    
+	
+	
+	
+	
+	
+	
+ 
+	
+	
+	
+
+
+</BorderPane>
